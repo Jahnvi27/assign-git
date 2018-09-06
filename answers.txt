@@ -1,4 +1,13 @@
-What is a gitignore file and what should it include for a Java project?
-What does fast-forward in Git mean?
-Why should you have different branches?
-In a project how many remote Git repositories do you usually have?
+1.What is a gitignore file and what should it include for a Java project?
+The gitignore file contains a list of file extensions that needs to be ignored when we are making a commit. There are multiple extra files created while working on a project such as class files in JAVA, some files created by the IDE. These files are also not required to the other people working on the project and may lead to confusion. Such file extensions are kept in the gitignore file. 
+For a JAVA project the files that can be included are:
+.class files , .zip files , .log files, .tar/.war/.jar files temporary IDE files 
+2.What does fast-forward in Git mean?
+Lets consider the case where we have master and one branch. We did some commits in the master and after that created a branch from it. We then made some commitsin the branch. The master is still there only where it was when we had cut the branch from it. So now when we have to merge the branch to the master, git will do a fast forward, that is shift the master's pointer to the same place as the branch's pointer. This will be done only when the master is not modified at all. If some other commits from a separate branch were merged to the master, that is if the master had diverged from the point when the branch was created then fast forward is not possible.
+
+3.Why should you have different branches?
+It is advised to have different branches when multiple people are working on a project or different type of task needs to be done. It basically allows to work parallely. People can work in their own branch without worrying about what is happening on the other branch. If anything wrong is implemented, the entire code base is not affected and other people working on the same codebase are also not affected. Maintenance and collaboration becomes easier and organised.
+ 
+4.In a project how many remote Git repositories do you usually have?
+Usually for a single project we have one remote git repository.We can have multiple repositories if the entire framework has multiple projects, or the repository size exceeds the given limit. But maintaining multiple git repositories is a difficult task.
+
