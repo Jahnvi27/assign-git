@@ -1,7 +1,7 @@
 1.What is a gitignore file and what should it include for a Java project?
 The gitignore file contains a list of file extensions that needs to be ignored when we are making a commit. There are multiple extra files created while working on a project such as class files in JAVA, some files created by the IDE. These files are also not required to the other people working on the project and may lead to confusion. Such file extensions are kept in the gitignore file. 
 For a JAVA project the files that can be included are:
-.class files , .zip files , .log files, .tar/.war/.jar files temporary IDE files 
+.class files , .zip files , .log files, .tar/.war/.jar/.nar/.ear/.rar files temporary IDE files, .ctxt files, .mtj.tmp files
 2.What does fast-forward in Git mean?
 Lets consider the case where we have master and one branch. We did some commits in the master and after that created a branch from it. We then made some commitsin the branch. The master is still there only where it was when we had cut the branch from it. So now when we have to merge the branch to the master, git will do a fast forward, that is shift the master's pointer to the same place as the branch's pointer. This will be done only when the master is not modified at all. If some other commits from a separate branch were merged to the master, that is if the master had diverged from the point when the branch was created then fast forward is not possible.
 
